@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        video{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        * {
+        box-sizing: border-box;
+        }
+
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+    </style>
+
+    <title>Creative Technology 3</title>
+</head>
+<body style="background-color:lightseagreen;">
+    <title> Project3: Creatures </title>
+    <h1 style="text-align:center; font-size:200%;"> Project3: Creatures </h1>
+
+    <p style="text-align:center; font-size:120%;">Collaborated Project with Alan Amaya</p>
+
+    <h2> 1. Project Brief </h2>
+
+    <p>“Do you have a technology-dependent creative project in your head that you want to build? 
+        Do you look at a particular kind of work by other interactive designers/artists and think 
+        "I wish I knew how to make that!" In this project, we're dropping you in at the deep end. 
+        We want you to propose a creative technology project, and we're going to try to help you 
+        build it. Or, more accurately, we're going to help you identify and kludge together a 
+        small critical piece of it.”</p>
+
+    <h2> 2. Concept </h2>
+    <p>Our world contains two inter-related creatures: the Marker (creature A), and the Eraser 
+        (creature B). The Marker has legs made of charcoal, and the Eraser has sponges as its 
+        limbs. The Marker is driven by the light intensity in the environment that the Eraser 
+        keeps an eye on, and the Eraser is propelled by the audio level in the environment sensed 
+        by the Marker. Together, they can perceive the space they are in and react to it based on 
+        the information received from their partner. </p>
+    
+    <div class="row">
+        <div class="column">
+            <img src="Project3_Creature A.png" alt="Creature A Image" 
+            style="width:400px">
+            <p style="text-align:center;">Creature A: The Marker</p>
+        </div>
+        <div class="column">
+            <img src="Project3_Creature B.png" alt="Creature B Image" 
+            style="width:400px">
+            <p style="text-align:center;">Creature B: The Eraser</p>
+        </div>
+    </div>
+
+
+    <h2> 3. Iterations </h2> 
+
+    <h3> Plan A: </h3>
+    <p>Creature A has emotions through different colors and intensity of light, which is a real-time 
+        response to the ambient sound emitted by creature B. In the meantime, creature B reads 
+        creature A’s emotions, and controls the ambient sound and the window accordingly. </p>
+
+    <p>We made the following table to map out the type of reactions each creature will have: </p>
+    
+    <img src="Project3_planA.png" alt="Plan A Image"
+    style="width:400px"> 
+
+    <p>However, when our NeoPixel ring arrived, we noticed that it runs on 5V, different than the 
+        3.3V ESP32 runs on. It was too late to wait for a level shifter to arrive, so we abandoned 
+        NeoPixel at all.</p>
+
+    <img src="Project3_NeoPixel.jpg" alt="NeoPixel Image"
+    style="width:400px">
+    <p style="text-align:center;">NeoPixel Rings</p>
+
+    <p>We also realized that in order to play ambient sound, we need an external music player 
+        (e.g. a phone) other than ESP32, which is against the idea of a self-sufficient creature. 
+        We decided to reduce the complexity in this plan, which led us to plan B. </p>
+
+    <h3> Plan B: </h3>
+    <img src="Project3_planB.jpg" alt="Plan B Image"
+    style="width:400px">
+
+    <p>Creature A has a mini sound sensor and runs on wheels. Creature B has a photocell and a 
+        stepper motor that spins something. The spinning of the stepper motor on creature B depends 
+        on the intensity of sound creature A captures. Meanwhile, the movement of creature A is determined 
+        by the intensity of light creature B senses. </p>
+
+
+    <h2> 4. Making Process </h2> 
+    We then moved on to the making process. <br>
+    <img src="Project3_process-Welding.jpg" alt="Welding Image"
+    style="width:400px"> <br>
+    <img src="Project3_process-CreatureA.jpg" alt="Creature A Process Image"
+    style="width:400px"> <br>
+    <center>
+        <iframe src="https://player.vimeo.com/video/657742094?h=b1462db91b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+        width="400" height="225" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="IMG_8628.MOV"></iframe>
+    </center><br>
+    <p>with Stepper Motor</p>
+
+    <center>
+        <iframe src="https://player.vimeo.com/video/657735098?h=5464eef83e&amp;badge=0&amp;autopause=0&amp;
+        player_id=0&amp;app_id=58479" width="400" height="225" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" 
+        allowfullscreen title="Project3_Documentation1" ></iframe>
+    </center> <br>
+    <p>with Servo Motor</p>
+    
+    <center>
+        <iframe src="https://player.vimeo.com/video/657741036?h=f24e09c873&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+        width="400" height="711" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="IMG_8672.MOV"></iframe>
+    </center> <br>
+
+    <img src="Project3_process-CreatureB.jpg" alt="Creature B Process Image"
+    style="width:400px"><br>
+
+    <center>
+        <iframe src="https://player.vimeo.com/video/657741736?h=3de55de56c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+        width="400" height="711" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="IMG_8678.MOV"></iframe>
+    </center> <br>
+
+
+    <p>We had to switch from stepper to servo motor for Creature B because we only had one FeatherWing 
+        add-on which we need to drive Creature A’s two DC motors. </p>
+
+    <img src="Project3_process-Communication.jpg" alt="Communication Image"
+    style="width:400px">
+
+    <h2>5. Final Design</h2>
+    <h3>5.1 Catalog of Tools</h3>
+    <img src="Project3_Catalog.png" alt="Catalog of Tools"
+    style="width:400px">
+    <h3>5.2 How It Works</h3>
+    <img src="Project3_electronics_with code.png" alt="How It Works"
+    style="width:1200px">
+    <h3>5.3 Arduino Code</h3>
+    <a href="Project3_CreatureA_code.ino">Creature A Code</a> <br>
+    <a href="Project3_CreatureB_code.ino">Creature B Code</a> <br>
+
+    <h3>5.4 Project Video</h3>
+    <center>
+        <div style="padding:75% 0 0 0;position:relative;">
+            <iframe src="https://player.vimeo.com/video/657733055?h=2792573c75&amp;badge=0&amp;autopause=0&amp;
+            player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" 
+            allowfullscreen style="position:absolute;top:0;left:0;width:80%;height:80%;" title="Project3_Final Vid_The Creatures.mp4">
+            </iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+    </center>
+
+
+
+</body>
+</html>
