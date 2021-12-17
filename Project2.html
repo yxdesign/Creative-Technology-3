@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        img{
+            img{
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -16,30 +16,63 @@
             margin-left: auto;
             margin-right: auto;
         }
+        * {
+        box-sizing: border-box;
+        }
+
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
     </style>
     <title>Creative Technology 3</title>
 </head>
-<body>
-    <h1> Yue Xi's CT Documentation </h1>
-   
+<body style="background-color:dimgray;">
+    <h1 style="text-align:center; font-size:200%;"> Project2: Energy </h1>
+    <h2> 1. Brief </h2>
+    <p>"For this project, you will create a vivarium: a micro-world where a defined set of properties and behaviors are placed and developed.
+        As a starting point, you will be assigned one of the following verbs, each inspired by a current global crisis, nearing a tipping point: 
+        a condition where a controlling system is overwhelmed, sometimes beyond potential return or repair."</p>
+    <p>The word I was assigned to was Growth.</p>
 
-    <h2> Project2: Energy </h2>
-    <h3> Project Iterations </h3>
-    <h3> <video  width = "540" height = "540" controls autoplay> 
-        <source src = "https://user-images.githubusercontent.com/90938623/139655549-a1f4b947-2428-40f0-818b-21f36840c327.mp4" type = video/mp4>
-    </video></h3>
+    <h2> 2. Concept </h2>
+    <p>Everything grows at the expense of others. To illustrate this phenomenon, I speculated an otherworldly 
+        space where seeds are floating in the air. The only light source in this dark space are energy particles.  
+        Every time an energy particle clashes with the core of a seed, the seed germinates, and the particle 
+        disappears. The changing of light condition epitomizes the impact the growth of seed has on environment. </p>
 
-    <h3> <video width = "540" height = "540" controls autoplay> 
-        <source src = "https://user-images.githubusercontent.com/90938623/139658605-113b6d22-dce1-4223-aeb8-a31790cbeb99.mp4" type = video/mp4>
+    <h2> 3. Iterations </h2>
+    <div class="row">
+        <div class="column">
+            <video  width = "540" height = "540" controls autoplay> 
+                <source src = "https://user-images.githubusercontent.com/90938623/139655549-a1f4b947-2428-40f0-818b-21f36840c327.mp4" type = video/mp4>
+            </video> <br>
+        </div>
+        <div class="column">
+            <video width = "540" height = "540" controls autoplay> 
+                <source src = "https://user-images.githubusercontent.com/90938623/139658605-113b6d22-dce1-4223-aeb8-a31790cbeb99.mp4" type = video/mp4>
+                <source src = "https://user-images.githubusercontent.com/90938623/139659073-af18ae75-d208-44c7-a8eb-4a555e65d5e7.mp4" type = video/mp4>
+            </video>
+        </div>
+    </div>
+
+
+    <video width = "540" height = "540" controls autoplay> 
         <source src = "https://user-images.githubusercontent.com/90938623/139659073-af18ae75-d208-44c7-a8eb-4a555e65d5e7.mp4" type = video/mp4>
-    </video></h3>
+    </video><br>
 
-    <h3> <video width = "540" height = "540" controls autoplay> 
-        <source src = "https://user-images.githubusercontent.com/90938623/139659073-af18ae75-d208-44c7-a8eb-4a555e65d5e7.mp4" type = video/mp4>
-    </video></h3>
-
-    <h3> Youtube Link: https://youtu.be/EMfY1tB5LBc </h3>
-    <iframe width="1120" height="630" src="https://www.youtube.com/embed/EMfY1tB5LBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h2> 4. Final Design </h2>
+    Youtube Link: https://youtu.be/EMfY1tB5LBc <br>
+    <iframe width="1120" height="630" src="https://www.youtube.com/embed/EMfY1tB5LBc" title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </body>
 </html>
