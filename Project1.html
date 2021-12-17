@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        video{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+    <title>Creative Technology 3</title>
+</head>
+<body style="background-color:powderblue;">
+    <title> Project1: Paint Strokes of Privacy </title>
+    <h1 style="text-align:center; font-size:200%;"> Project1: Paint Strokes of Privacy </h1>
+
+    <h2> 1. Project Brief </h2>
+
+    <p>“Do you have a technology-dependent creative project in your head that you want to build? 
+        Do you look at a particular kind of work by other interactive designers/artists and think 
+        "I wish I knew how to make that!" In this project, we're dropping you in at the deep end. 
+        We want you to propose a creative technology project, and we're going to try to help you 
+        build it. Or, more accurately, we're going to help you identify and kludge together a 
+        small critical piece of it.”</p>
+
+    <h2> 2. Inspirations </h2>
+    <p style ="font-size:120%;"">My Little Piece of Privacy, 2010, Niklas Roy</p>
+    Project Link: https://www.niklasroy.com/project/88/my-little-piece-of-privacy </bl>
+    
+    <p>Designer Niklas Roy’s studio situates on the ground floor with a giant window facing the street. 
+        He was constantly disturbed by curious gaze from pedestrians passing by, but a thick curtain 
+        will not only block the unwanted attention, but also keep him away from the view. Therefore, 
+        a fun solution he came up was to design an automatic, mechanical curtain that can track and 
+        follow people’s position in real time: wherever a person goes, the curtain will follow them, 
+        hence preventing them from staring into the studio. </p>
+    <p>This project makes use of a webcam that sends footage in real time to a laptop with a computer 
+        vision program, and a DIY motorized curtain. </p>
+    <p>I quite like the sense of humor in this small, creative technology project, because although 
+        such a device does seem to solve the problem on the surface, in reality it attracts more 
+        attention than before.</p>
+
+    <h2> 3. Design Process </h2>
+    <p>I started with the intention to duplicate Niklas’ project at a smaller scale. I created a system
+         diagram of Niklas’ project as a method of analysis:</p>
+    <h3> <img src="https://user-images.githubusercontent.com/90938623/134650197-34a724e9-e598-41a2-b2fc-59b70448d7e5.jpg" 
+        width = "800" height = "574.4"
+        alt="Project1_SystemDiagram_ver1"></h3>
+    
+    <p>Then, I thought about how to move this project to a smaller scale, one that is more manageable 
+        by me, and hence this second system diagram mapping my project:</p>
+    <h3> <img src="https://user-images.githubusercontent.com/90938623/139645634-e292c1bc-1569-410e-b56f-11b77cecf323.jpg" 
+        width = "800" height = "563.3"
+        alt="Project1_SystemDiagram_ver2" ></h3>
+    
+    <p>However, it took quite a few days for the physical computing components to arrive. After 
+        considering the limited timeframe of this project, I decided to switch everything digital
+         – to use p5.js instead.</p>
+    
+    <p>The next question popped up in the process of digitization: what would I keep and change 
+        when moving the project digital?</p>
+    
+    <p>After some initial research into what p5.js can do, I decided to play with the process of 
+        blocking one’s view using methods unique to digital programming. I found a video footage 
+        f a private garden from https://www.window-swap.com, which was shot from the point of view 
+        of a window. This represents the idea of privacy in Niklas’ project. By looking at this 
+        video, the viewers become pedestrians trying to peep into Niklas’ window. Moreover, 
+        instead of hanging an image of a curtain, I could distort the video so that nobody can see 
+        what’s going on. This does not stop people from staring but in some way invite them to do 
+        so, but it is effective in not allowing them to see the inside (or content) clearly. </p>
+
+    <p>Thus, I made a third and final system diagram as follows:</p>
+    <h3> <img src="https://user-images.githubusercontent.com/90938623/139647005-c61c59ba-d68b-4f6a-8338-5b027cf303b7.jpg" 
+        width = "800" height = "353.6"
+        alt="Project1_SystemDiagram_ver3"></h3>
+
+    <p>The next step was to write the code on p5.js. I based my code on an open-source machine 
+        learning model called “PoseNet” from ml5 which can estimate human pose in real time. I 
+        used it to detect and store people’s nose position, which was then translated to a respective 
+        position on the frame. Curves would be generated around that position according to my code.  </p>
+    
+    <p>With the help of many online tutorials, I got this:</p>
+    <h3> <video width = "500" height = "616" controls autoplay> 
+        <source src = "https://user-images.githubusercontent.com/90938623/139651507-87b33000-2f5a-45ea-9b34-dc47ddc3c401.mp4" type = video/mp4>
+    </video></h3>
+
+    <p>I experimented with different sets of parameters to see what would appear:</p>
+    <h3> <video width = "1080" height = "618" controls autoplay> 
+        <source src = "https://user-images.githubusercontent.com/90938623/139651908-e1ebfab6-3f02-4bb7-a483-c6dc8aa30157.mp4" type = video/mp4>
+    </video></h3>
+
+    <p>Iterations of Code:</p>
+    <a href="project1_iteration1.js">Iteration 1</a> <br>
+    <a href="project1_iteration2.js">Iteration 2</a> <br>
+    <a href="project1_iteration3.js">Iteration 3</a> <br>
+    <a href="project1_iteration4.js">Iteration 4</a> <br>
+    <a href="project1_iteration5.js">Iteration 5</a>
+    <br>
+    <br>
+    <h2> 4. Final Design </h2>
+    <p>To create the effect of blocking people’s view, I overlay the video footage on top of camera 
+        frame. The final effect looks like this:</p>
+    <a href="project1_final.js">Final Project Code</a> <br>
+    Youtube Link: https://youtu.be/fjs75I18Q70 <br>
+    <iframe width="1120" height="630" src="https://www.youtube.com/embed/fjs75I18Q70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+</body>
+</html>
