@@ -16,12 +16,127 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        * {
+        box-sizing: border-box;
+        }
+
+        .column {
+        float: left;
+        width: 25%;
+        padding: 15px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
         
     </style>
     <title>Creative Technology 3</title>
 </head>
 <body style="background-color:lightgreen;">
-    <h1 style="text-align:center; font-size:200%;"> Project4: Flags </h1>
+    <h1 style="text-align:center; font-size:200%;"> Project4: Logarithmic Flags </h1>
 
+    <h2>1. Brief</h2>
+    <p>Create an object in Unity or any other environment of your choosing and color it using 
+        shaders in a way that “makes sense”</p>
+
+    <h2>2. Concept</h2>
+    <p>I created a series of AR flags using shaders which can be mapped onto people's faces. 
+        Logarithmic function is used in the code that generates these shaders, affecting the 
+        resulting graphics one way or another. By “painting” logarithmic flags on people’s 
+        faces, this project is a celebration of logarithm – the ingenious inverse function 
+        to exponentiation! </p>
+    
+    <h2>3. Making Process</h2>
+    <p>I used an online shader editor to make shaders: https://shawnlawson.github.io/The_Force/</p>
+    <p>I started with randomly changing parameters and adding trigonometric and inverse 
+        trigonometric functions to the sample code provided by our lecturer Char. Here’s 
+        what I got:</p>
+    
+    <div class="row">
+        <div class="column">
+            
+        </div>
+        <div class="column">
+            <img src="project4_shader1.gif" alt="Shader 1 gif" style="width:300px;">
+        </div>
+        <div class="column">
+            <img src="project4_shader2.gif" alt="Shader 2 gif" style="width:300px;">
+        </div>
+        <div class="column">
+            
+        </div>
+    </div>
+
+
+    <p>Then, I thought of using logarithm somewhere in the code, which led me to some interesting 
+        visuals that look like flags:</p>
+
+    <div class="row">
+        <div class="column">
+            
+        </div>
+        <div class="column">
+            <img src="project4_shader3.gif" alt="Shader 3 gif" style="width:300px;">
+        </div>
+        <div class="column">
+            <img src="project4_shader4.gif" alt="Shader 4 gif" style="width:300px;">
+        </div>
+        <div class="column">
+        
+        </div>
+    </div>
+
+        
+    <p>Even though each of them looked super abstract and distinct, one can still tell their correlation 
+        with logarithm. Thus, I decided to turn this project into a celebration of logarithmic functions, 
+        by making even more of these flag shaders:</p>
+
+
+    <div class="row">
+        <div class="column">
+            <img src="project4_flag1.gif" alt="Flag 1 gif" style="width:300px;">
+        </div>
+        <div class="column">
+            <img src="project4_flag2.gif" alt="Flag 2 gif" style="width:300px;">
+        </div>
+        <div class="column">
+            <img src="project4_flag3.gif" alt="Flag 3 gif" style="width:300px;">
+        </div>
+        <div class="column">
+            <img src="project4_flag4.gif" alt="Flag 4 gif" style="width:300px;">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="project4_flag5.gif" alt="Flag 5 gif" style="width:300px;">
+        </div>
+        <div class="column">
+            <img src="project4_flag6.gif" alt="Flag 6 gif" style="width:300px;">
+        </div>
+        <div class="column">
+            <img src="project4_flag7.gif" alt="Flag 7 gif" style="width:300px;">
+        </div>
+        <div class="column">
+            <img src="project4_flag8.gif" alt="Flag 8 gif" style="width:300px;">
+        </div>
+    </div>
+
+    <p>Because it is quite common for people to wear paint of flags they feel 
+        proud of on their face, I used Lens Studio to turn these shaders into 
+        AR face flags. </p>
+    <center><img src="project4_process1.png" alt="process image 1" style="width:600px;"></center><br>
+    <center><img src="project4_process2.png" alt="process image 2" style="width:600px;"></center><br>
+
+
+    <h2>4. Final Design</h2>
+    <h3>SnapChat Filter Mockup:</h3>
+    <center><img src="project4_mockup.gif" alt="SnapChat Filter Mockup" style="width:600px;"></center><br>
+    <center><img src="project4_snapcode.png" alt="Snap Code" style="width:200px;"></center><br>
 </body>
 </html>
